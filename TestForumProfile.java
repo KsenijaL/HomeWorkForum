@@ -33,19 +33,6 @@ public class TestForumProfile {
         logInPage.clickSubmitLogInDetails();
         profilePage.clickProfile();
         profilePage.clickMyInfo();
-        //Get actual values
-//        profilePage.collectDate();
-        String actualFirstName = profileAttributes.getFirstName();
-        System.out.println(actualFirstName);
-//        String actualLastName = profileAttributes.getLastName();
-//        String actualDBDay = profileAttributes.getBdDay();
-//        String actualDBMonth = profileAttributes.getBdMonth();
-//        String actualDBYear = profileAttributes.getBdYear();
-//        String actualMobNr = profileAttributes.getMobNr();
-//        String actualCity = profileAttributes.getCityName();
-//        String actualLanguage = profileAttributes.getLanguageValue();
-
-        //Adjust values
         profileAttributes.setFirstName("Ksenija2");
         profileAttributes.setLastName("Lohina2");
         profileAttributes.setBdDay("21");
@@ -63,31 +50,14 @@ public class TestForumProfile {
         profilePage.editCityName(profileAttributes.cityName);
         profilePage.selectGenderMale();
         profilePage.selectLanguage(profileAttributes.languageValue);
-        //profilePage.submitChanges();
-
-        //Validate values
+        profilePage.submitChanges();
         profilePage.validateName(profileAttributes.firstName);
-        System.out.println(profileAttributes.firstName);
-
-        //Return values to existing
-        profilePage.editName(actualFirstName);
- //       profilePage.editSurname(actualLastName);
-//        profilePage.editBDday(actualDBDay);
-//        profilePage.editBDmonth(actualDBMonth);
-//        profilePage.editBDyear(actualDBYear);
-//        profilePage.editMobNr(actualMobNr);
-//        profilePage.editCityName(actualCity);
-//        // profilePage.SelectGenderMale();
-//        profilePage.selectLanguage(actualLanguage);
+        profilePage.validateSurname(profileAttributes.lastName);
+        profilePage.validateBDday(profileAttributes.bdDay);
+        profilePage.validateBDmonth(profileAttributes.bdMonth);
+        profilePage.validateBDyear(profileAttributes.bdYear);
+        profilePage.validateCityName(profileAttributes.cityName);
+        profilePage.validateGenderMale();
+        profilePage.validateLanguage(profileAttributes.languageValue);
     }
-
-
-
-
-
-
-
-
-
-
 }

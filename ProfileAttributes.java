@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.BeforeAll;
 
 public class ProfileAttributes {
-    String firstName ;
+    String firstName;
 
     public String getFirstName() {
         return firstName;
@@ -74,8 +74,6 @@ public class ProfileAttributes {
     String mobNr;
     String cityName;
     String languageValue;
-
-
 
 
 }

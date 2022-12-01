@@ -135,11 +135,4 @@ public class ProfilePage extends LogInPage {
         driver.findElement(submitProfile).click();
     }
 
-//    public void collectDate(){
-//        ProfileAttributes profileAttributes = new ProfileAttributes();
-//        profileAttributes.setFirstName(driver.findElement(firstName).getAttribute("value"));
-//
-//
-//    }
-
 }
